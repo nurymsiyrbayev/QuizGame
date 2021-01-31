@@ -53,6 +53,8 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal">
+                                    <color key="titleColor" red="0.29656083640000003" green="0.64945038720000003" blue="0.9589176774" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.29656083640000003" green="0.64945038720000003" blue="0.9589176774" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <imageReference key="backgroundImage" image="list.bullet.rectangle" catalog="system" symbolScale="large" renderingMode="original"/>
                                 </state>
                                 <connections>
@@ -65,13 +67,27 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quiz Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMc-ay-5bX">
+                                <rect key="frame" x="8" y="96" width="174.5" height="59.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="mKc-YP-0g6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="37"/>
+                                <color key="textColor" red="0.92686295510000005" green="0.50774601477356873" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" systemColor="systemIndigoColor"/>
+                                <color key="shadowColor" red="0.13618370715202643" green="0.32984952054970684" blue="0.69199880189502361" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="4" height="0.0"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="t2F-qq-ZH6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="8b6-0A-0En"/>
+                            <constraint firstItem="hMc-ay-5bX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="BO2-NF-STe"/>
+                            <constraint firstItem="hMc-ay-5bX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Bk0-xd-fER"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eZ2-VY-8Rf" secondAttribute="trailing" constant="30" id="CaO-HF-MeA"/>
                             <constraint firstItem="V40-K2-DUm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MmI-9h-jrT"/>
+                            <constraint firstItem="t2F-qq-ZH6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hMc-ay-5bX" secondAttribute="trailing" constant="8" symbolic="YES" id="ZzT-qP-1gk"/>
                             <constraint firstItem="eZ2-VY-8Rf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="faM-f8-pZs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t2F-qq-ZH6" secondAttribute="trailing" constant="8" id="iAQ-dU-ego"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V40-K2-DUm" secondAttribute="trailing" constant="8" id="oOl-yc-Bum"/>
@@ -135,18 +151,6 @@
                                     <action selector="answerAction:" destination="Loo-9d-ga4" eventType="touchUpInside" id="0No-gH-Y24"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwK-wE-i1c">
-                                <rect key="frame" x="20" y="612" width="374" height="70"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="BRe-jA-0DI"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="v2U-kp-qid"/>
-                                </constraints>
-                                <state key="normal" title="Section-3"/>
-                                <connections>
-                                    <action selector="answerAction:" destination="Loo-9d-ga4" eventType="touchUpInside" id="ocq-z8-dhP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3M8-Mn-LHd">
                                 <rect key="frame" x="20" y="532" width="374" height="70"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -188,6 +192,33 @@
                                     <action selector="previusPage:" destination="Loo-9d-ga4" eventType="touchUpInside" id="Yxb-h5-gwa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="199-lt-FYd">
+                                <rect key="frame" x="20" y="44" width="60" height="35"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="1OO-kN-7u1"/>
+                                    <constraint firstAttribute="height" constant="35" id="KXM-22-jcA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" red="1" green="0.25098040700000002" blue="0.24156863989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitFromGame:" destination="Loo-9d-ga4" eventType="touchUpInside" id="lPc-dm-NFc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwK-wE-i1c">
+                                <rect key="frame" x="47" y="346" width="374" height="70"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="BRe-jA-0DI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="v2U-kp-qid"/>
+                                </constraints>
+                                <state key="normal" title="Section-3"/>
+                                <connections>
+                                    <action selector="answerAction:" destination="Loo-9d-ga4" eventType="touchUpInside" id="ocq-z8-dhP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1ME-Ln-dXA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -199,6 +230,7 @@
                             <constraint firstItem="3R4-V8-k2Q" firstAttribute="bottom" secondItem="1ME-Ln-dXA" secondAttribute="bottom" id="BiM-D4-eeL"/>
                             <constraint firstItem="bn9-cP-Dfa" firstAttribute="top" secondItem="yaN-yv-xDo" secondAttribute="bottom" constant="50" id="CkZ-Yf-RnY"/>
                             <constraint firstItem="1ME-Ln-dXA" firstAttribute="trailing" secondItem="ohZ-Bb-yNX" secondAttribute="trailing" constant="20" id="I5K-ae-0Di"/>
+                            <constraint firstItem="199-lt-FYd" firstAttribute="top" secondItem="1ME-Ln-dXA" secondAttribute="top" id="IZu-0Y-XTt"/>
                             <constraint firstItem="bn9-cP-Dfa" firstAttribute="leading" secondItem="3R4-V8-k2Q" secondAttribute="trailing" constant="74" id="IkK-NH-zNY"/>
                             <constraint firstItem="3M8-Mn-LHd" firstAttribute="top" secondItem="nlV-MW-dZf" secondAttribute="bottom" constant="10" id="Kwm-Ja-rbi"/>
                             <constraint firstItem="yaN-yv-xDo" firstAttribute="top" secondItem="pwK-wE-i1c" secondAttribute="bottom" constant="10" id="MYF-uL-Df7"/>
@@ -207,10 +239,12 @@
                             <constraint firstItem="3M8-Mn-LHd" firstAttribute="leading" secondItem="1ME-Ln-dXA" secondAttribute="leading" constant="20" id="Vah-Qb-6XD"/>
                             <constraint firstItem="pwK-wE-i1c" firstAttribute="leading" secondItem="1ME-Ln-dXA" secondAttribute="leading" constant="20" id="bHg-Qn-NmR"/>
                             <constraint firstItem="bn9-cP-Dfa" firstAttribute="bottom" secondItem="1ME-Ln-dXA" secondAttribute="bottom" id="d1P-k9-SyU"/>
+                            <constraint firstItem="1ME-Ln-dXA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="199-lt-FYd" secondAttribute="trailing" symbolic="YES" id="dUP-DG-09n"/>
                             <constraint firstItem="1ME-Ln-dXA" firstAttribute="trailing" secondItem="nlV-MW-dZf" secondAttribute="trailing" constant="20" id="dsb-v0-u8P"/>
                             <constraint firstItem="1ME-Ln-dXA" firstAttribute="trailing" secondItem="3M8-Mn-LHd" secondAttribute="trailing" constant="20" id="iHY-SN-hJa"/>
                             <constraint firstItem="3R4-V8-k2Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1ME-Ln-dXA" secondAttribute="leading" id="kby-07-NTw"/>
                             <constraint firstItem="nlV-MW-dZf" firstAttribute="leading" secondItem="1ME-Ln-dXA" secondAttribute="leading" constant="20" id="moQ-40-2LT"/>
+                            <constraint firstItem="199-lt-FYd" firstAttribute="leading" secondItem="1ME-Ln-dXA" secondAttribute="leading" constant="20" id="p8c-et-rDe"/>
                             <constraint firstItem="1ME-Ln-dXA" firstAttribute="trailing" secondItem="pwK-wE-i1c" secondAttribute="trailing" constant="20" id="uro-et-u27"/>
                             <constraint firstItem="yaN-yv-xDo" firstAttribute="leading" secondItem="1ME-Ln-dXA" secondAttribute="leading" constant="20" id="vJd-Qg-hJy"/>
                             <constraint firstItem="1ME-Ln-dXA" firstAttribute="trailing" secondItem="yaN-yv-xDo" secondAttribute="trailing" constant="20" id="wVP-DT-v57"/>
@@ -229,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFp-3E-5mD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="114"/>
+            <point key="canvasLocation" x="821.73913043478262" y="113.83928571428571"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="MfU-tz-5Dp">
@@ -352,6 +386,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

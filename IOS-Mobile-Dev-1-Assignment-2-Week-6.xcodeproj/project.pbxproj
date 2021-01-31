@@ -12,6 +12,7 @@
 		07371A1E25C5A7060015D70C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07371A1D25C5A7060015D70C /* HistoryViewController.swift */; };
 		07371A2325C5C7EF0015D70C /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07371A2125C5C7EF0015D70C /* HistoryTableViewCell.swift */; };
 		07371A2425C5C7EF0015D70C /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07371A2225C5C7EF0015D70C /* HistoryTableViewCell.xib */; };
+		07444F0625C7212A00AD9FB9 /* UserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07444F0525C7212A00AD9FB9 /* UserHistory.swift */; };
 		07B50E5A25C2B6A00071A008 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B50E5925C2B6A00071A008 /* QuestionViewController.swift */; };
 		07B50E5E25C2BC0E0071A008 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B50E5D25C2BC0E0071A008 /* Question.swift */; };
 		07D999C925C043C20085EB2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D999C825C043C20085EB2F /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		07371A1D25C5A7060015D70C /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		07371A2125C5C7EF0015D70C /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		07371A2225C5C7EF0015D70C /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		07444F0525C7212A00AD9FB9 /* UserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistory.swift; sourceTree = "<group>"; };
 		07B50E5925C2B6A00071A008 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		07B50E5D25C2BC0E0071A008 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		07D999C525C043C20085EB2F /* IOS-Mobile-Dev-1-Assignment-2-Week-6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-Mobile-Dev-1-Assignment-2-Week-6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +67,7 @@
 			children = (
 				07B50E5D25C2BC0E0071A008 /* Question.swift */,
 				07371A1325C58BD70015D70C /* Quiz.swift */,
+				07444F0525C7212A00AD9FB9 /* UserHistory.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				07371A2325C5C7EF0015D70C /* HistoryTableViewCell.swift in Sources */,
 				07B50E5E25C2BC0E0071A008 /* Question.swift in Sources */,
 				07D999CD25C043C20085EB2F /* ViewController.swift in Sources */,
+				07444F0625C7212A00AD9FB9 /* UserHistory.swift in Sources */,
 				07371A1425C58BD70015D70C /* Quiz.swift in Sources */,
 				07D999C925C043C20085EB2F /* AppDelegate.swift in Sources */,
 				07B50E5A25C2B6A00071A008 /* QuestionViewController.swift in Sources */,

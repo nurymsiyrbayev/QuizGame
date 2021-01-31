@@ -9,9 +9,17 @@ import UIKit
 
 class QuestionViewController: UIViewController{
     var questionArray = [Question](arrayLiteral:
-    Question(questionText: "4x4", answereList: ["1","4","8","16"], correctAnswere: 4,answer: nil,  isAnswered: false),
+    Question(questionText: "4 x 4 = ?", answereList: ["1","4","8","16"], correctAnswere: 4,answer: nil,  isAnswered: false),
     Question(questionText: "20 % of 2 is equal to", answereList: ["0.02","0.2","0.4","0.04"], correctAnswere: 3,answer: nil,  isAnswered: false),
-    Question(questionText: "Which of these is the Worst-case time complexity of Quick Sort - and cannot be expressed in lower order terms ?", answereList: ["O(n log n)","O(n)","O(n2)","O(n3)"], correctAnswere: 2,answer: nil,  isAnswered: false))
+    Question(questionText: "Which of these is the Worst-case time complexity of Quick Sort - and cannot be expressed in lower order terms ?", answereList: ["O(n log n)","O(n)","O(n2)","O(n3)"], correctAnswere: 2,answer: nil,  isAnswered: false),
+    Question(questionText: "Which of these is the worst case time complexity of Merge Sort - and cannot be expressed in lower order terms ?", answereList: ["O(n log n)","O(n)","O(n2)","O(n3)"], correctAnswere: 1,answer: nil,  isAnswered: false),
+    Question(questionText: "Which of these is the average case time complexity of Merge Sort - and cannot be expressed in lower order terms ?", answereList: ["O(n log n)","O(n)","O(n2)","O(n3)"], correctAnswere: 3,answer: nil,  isAnswered: false),
+    Question(questionText: "Which of these is the time complexity involved in building a heap of n elements - and cannot be expressed in lower order terms ?", answereList: ["O(n log n)","O(n)","O(n2)","O(n3)"], correctAnswere: 4,answer: nil,  isAnswered: false),
+    Question(questionText: "A union find data-structure is commonly applied while implementing: ", answereList: ["A depth-first search traversal of a graph.","A breadth-first search traversal of a graph.","Computing the minimum spanning tree of a graph using the Kruskal algorithm.","Computing the all-pairs shortest path in a graph."], correctAnswere: 2,answer: nil,  isAnswered: false),
+    Question(questionText: "Which of these is the worst case time complexity for looking up a key in a binary search tree - and cannot be expressed in lower order terms ?", answereList: ["O(n log n)","O(n)","O(n2)","O(n3)"], correctAnswere: 4,answer: nil,  isAnswered: false),
+    Question(questionText: "Of 20 rats in a laboratory, 12 are males and 9 are infected with a virus. Of the 12 male rats, 7 infected with the virus. One rat is randomly selected from the laboratory. If the selected rat is found to be a male, what is the probability that it is infected?", answereList: ["7/12","7/20","11/20","12/20"], correctAnswere: 1,answer: nil,  isAnswered: false),
+    Question(questionText: "Suppose that P(A)=0.48 , P(B)=0.62 , and P(A AND B)=0.28 . Find the conditional probability that B does not occur, given that A occurs.", answereList: ["0.417","0.583","0.432","0.524"], correctAnswere: 2,answer: nil,  isAnswered: false))
+    
     var currentQuestion = 0
     var quizPoint = 0
     
@@ -34,8 +42,7 @@ class QuestionViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(questionArray[currentQuestion].answereList[questionArray[currentQuestion].correctAnswere-1])
-        setQuestion()
+        self.setQuestion()
     }
     
     @IBOutlet weak var nextPageButton: UIButton!
@@ -58,6 +65,11 @@ class QuestionViewController: UIViewController{
             self.currentQuestion -= 1
         }
         setQuestion()
+    }
+    
+    @IBAction func exitFromGame(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func areAllAnswered() -> Bool {

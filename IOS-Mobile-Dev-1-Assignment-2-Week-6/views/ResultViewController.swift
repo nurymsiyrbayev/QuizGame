@@ -14,12 +14,10 @@ class ResultViewController: UIViewController {
     var questionCount:Int?
     var questionArray:[Question]?
     
-    weak var delegate: ResultViewControllerDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate?.addNewAttemt(self.totalPoint ?? 0, self.questionCount ?? 0, self.questionArray ?? [Question(questionText: "question", answereList: ["?"], correctAnswere: 0, answer: 0, isAnswered: true)])
         self.animateBackgroundColor()
+        HystorySingleton.shared.addNewQuiz(Quiz.init(attemtTitle: String(HystorySingleton.shared.quizHystory.count)+"attemt", totalPoint: totalPoint ?? 1, questionCount: questionCount ?? 1, questionArray: questionArray))
         self.title = "Result Page"
         self.result.text = String(totalPoint ?? 0)+"/"+String(questionCount ?? 0)
     }
@@ -35,7 +33,7 @@ class ResultViewController: UIViewController {
     }
     
     private func animateBackgroundColor() {
-        let percentageScore = Int(self.totalPoint ?? 10)/(self.questionCount ?? 1)*100
+        let percentageScore = Int((self.totalPoint ?? 10) * 100/(self.questionCount ?? 1))
         if percentageScore > 100 || percentageScore < 0{
             UIView.animate(withDuration: 0.4,animations: {
                 self.view.backgroundColor = .darkGray
@@ -53,7 +51,7 @@ class ResultViewController: UIViewController {
                         self.view.backgroundColor = .white
                     })
                 })
-            }else if (percentageScore >= 70 )&&(percentageScore < 90 )  {
+            }else if percentageScore >= 70 && percentageScore < 90 {
                 UIView.animate(withDuration: 0.4,animations: {
                     self.view.backgroundColor = UIColor.init(red: 230/256, green: 255/256, blue: 156/256, alpha: 1.0)
                 },  completion:{ (completed: Bool) -> Void in
@@ -61,7 +59,7 @@ class ResultViewController: UIViewController {
                         self.view.backgroundColor = .white
                     })
                 })
-            }else if (percentageScore >= 50 )&&(percentageScore < 70 )  {
+            }else if percentageScore >= 50 && percentageScore < 70 {
                 UIView.animate(withDuration: 0.4,animations: {
                     self.view.backgroundColor = UIColor.init(red: 255/256, green: 255/256, blue: 199/256, alpha: 1.0)
                 },  completion:{ (completed: Bool) -> Void in
@@ -69,7 +67,7 @@ class ResultViewController: UIViewController {
                         self.view.backgroundColor = .white
                     })
                 })
-            }else if (percentageScore >= 25 )&&(percentageScore < 50 )  {
+            }else if percentageScore >= 25 && percentageScore < 50 {
                 UIView.animate(withDuration: 0.4,animations: {
                     self.view.backgroundColor = UIColor.init(red: 255/256, green: 193/256, blue: 166/256, alpha: 1.0)
                 },  completion:{ (completed: Bool) -> Void in

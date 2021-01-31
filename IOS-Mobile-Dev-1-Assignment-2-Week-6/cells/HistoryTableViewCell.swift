@@ -22,17 +22,17 @@ class HistoryTableViewCell: UITableViewCell {
     }
     
     private func setCellColor(_ totalPoint: Int,_ questionCount: Int){
-        let percentageScore = Int(totalPoint/questionCount*100)
+        let percentageScore = Int( totalPoint * 100 / questionCount )
         if percentageScore > 100 || percentageScore < 0{
             contentView.backgroundColor = .darkGray
         }else{
             if percentageScore >= 90{
                 contentView.backgroundColor = .green
-            }else if (percentageScore >= 70 )&&(percentageScore < 90 )  {
+            }else if percentageScore >= 70 && percentageScore < 90 {
                 contentView.backgroundColor = .systemYellow
-            }else if (percentageScore >= 50 )&&(percentageScore < 70 )  {
+            }else if percentageScore >= 50 && percentageScore < 70 {
                 contentView.backgroundColor = .orange
-            }else if (percentageScore >= 25 )&&(percentageScore < 50 )  {
+            }else if percentageScore >= 25 && percentageScore < 50 {
                 contentView.backgroundColor = .red
             }else{
                 contentView.backgroundColor = .systemRed
