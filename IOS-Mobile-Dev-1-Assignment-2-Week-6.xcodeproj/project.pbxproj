@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		07371A1125C575DB0015D70C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07371A1025C575DB0015D70C /* ResultViewController.swift */; };
 		07371A1425C58BD70015D70C /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07371A1325C58BD70015D70C /* Quiz.swift */; };
-		07371A1E25C5A7060015D70C /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07371A1D25C5A7060015D70C /* HistoryTableViewController.swift */; };
+		07371A1E25C5A7060015D70C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07371A1D25C5A7060015D70C /* HistoryViewController.swift */; };
 		07371A2325C5C7EF0015D70C /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07371A2125C5C7EF0015D70C /* HistoryTableViewCell.swift */; };
 		07371A2425C5C7EF0015D70C /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07371A2225C5C7EF0015D70C /* HistoryTableViewCell.xib */; };
 		07B50E5A25C2B6A00071A008 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B50E5925C2B6A00071A008 /* QuestionViewController.swift */; };
@@ -25,7 +25,7 @@
 /* Begin PBXFileReference section */
 		07371A1025C575DB0015D70C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		07371A1325C58BD70015D70C /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
-		07371A1D25C5A7060015D70C /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		07371A1D25C5A7060015D70C /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		07371A2125C5C7EF0015D70C /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		07371A2225C5C7EF0015D70C /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		07B50E5925C2B6A00071A008 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 				07D999CC25C043C20085EB2F /* ViewController.swift */,
 				07B50E5925C2B6A00071A008 /* QuestionViewController.swift */,
 				07371A1025C575DB0015D70C /* ResultViewController.swift */,
-				07371A1D25C5A7060015D70C /* HistoryTableViewController.swift */,
+				07371A1D25C5A7060015D70C /* HistoryViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 				07371A1425C58BD70015D70C /* Quiz.swift in Sources */,
 				07D999C925C043C20085EB2F /* AppDelegate.swift in Sources */,
 				07B50E5A25C2B6A00071A008 /* QuestionViewController.swift in Sources */,
-				07371A1E25C5A7060015D70C /* HistoryTableViewController.swift in Sources */,
+				07371A1E25C5A7060015D70C /* HistoryViewController.swift in Sources */,
 				07D999CB25C043C20085EB2F /* SceneDelegate.swift in Sources */,
 				07371A1125C575DB0015D70C /* ResultViewController.swift in Sources */,
 			);

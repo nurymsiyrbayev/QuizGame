@@ -28,7 +28,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="IOS_Mobile_Dev_1_Assignment_2_Week_6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -82,6 +81,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="byj-Xl-uUI"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="113.83928571428571"/>
         </scene>
@@ -305,36 +305,35 @@
             </objects>
             <point key="canvasLocation" x="1528.985507246377" y="113.83928571428571"/>
         </scene>
-        <!--History Table View Controller-->
-        <scene sceneID="L9c-Ec-cek">
+        <!--History View Controller-->
+        <scene sceneID="vpj-61-QGE">
             <objects>
-                <viewController storyboardIdentifier="HistoryTableViewController" id="Sfa-yh-vg6" customClass="HistoryTableViewController" customModule="IOS_Mobile_Dev_1_Assignment_2_Week_6" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WkP-Ww-Yse">
+                <viewController storyboardIdentifier="HistoryViewController" id="wlM-iB-De6" customClass="HistoryViewController" customModule="IOS_Mobile_Dev_1_Assignment_2_Week_6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4PK-hQ-VEG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Eu-eL-HpJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YvC-Zc-hzc">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="WB5-pl-t2S"/>
+                        <viewLayoutGuide key="safeArea" id="dym-LE-Yyj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0Eu-eL-HpJ" firstAttribute="leading" secondItem="WB5-pl-t2S" secondAttribute="leading" id="4U6-1J-bJu"/>
-                            <constraint firstItem="0Eu-eL-HpJ" firstAttribute="centerX" secondItem="WkP-Ww-Yse" secondAttribute="centerX" id="A0p-Kk-jGb"/>
-                            <constraint firstItem="0Eu-eL-HpJ" firstAttribute="bottom" secondItem="WB5-pl-t2S" secondAttribute="bottom" id="P1g-Iv-dSE"/>
-                            <constraint firstItem="0Eu-eL-HpJ" firstAttribute="trailing" secondItem="WB5-pl-t2S" secondAttribute="trailing" id="Vo2-VL-VZx"/>
-                            <constraint firstItem="0Eu-eL-HpJ" firstAttribute="top" secondItem="WB5-pl-t2S" secondAttribute="top" id="oVz-tL-kKb"/>
+                            <constraint firstItem="YvC-Zc-hzc" firstAttribute="top" secondItem="dym-LE-Yyj" secondAttribute="top" id="18v-G1-bki"/>
+                            <constraint firstItem="YvC-Zc-hzc" firstAttribute="trailing" secondItem="dym-LE-Yyj" secondAttribute="trailing" id="fjW-yO-ULx"/>
+                            <constraint firstItem="YvC-Zc-hzc" firstAttribute="bottom" secondItem="dym-LE-Yyj" secondAttribute="bottom" id="iW5-QN-vcL"/>
+                            <constraint firstItem="YvC-Zc-hzc" firstAttribute="leading" secondItem="dym-LE-Yyj" secondAttribute="leading" id="vlX-4q-Hgu"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="historyTableView" destination="0Eu-eL-HpJ" id="NXl-Yu-JdP"/>
+                        <outlet property="historyTableView" destination="YvC-Zc-hzc" id="lI4-0S-Ak6"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t2A-dY-bee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SJY-ey-bmb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2242.0289855072465" y="113.83928571428571"/>
+            <point key="canvasLocation" x="2282.608695652174" y="113.83928571428571"/>
         </scene>
     </scenes>
     <resources>

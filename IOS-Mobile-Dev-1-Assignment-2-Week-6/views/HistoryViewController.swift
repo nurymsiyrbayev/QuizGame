@@ -7,13 +7,23 @@
 
 import UIKit
 
-class HistoryTableViewController: UITableViewController {
+protocol ResultViewControllerDelegate:class {
+    func addNewAttemt(_ totalPoint: Int,_ questionCount: Int,_ questionArray:[Question])
+}
+
+extension HistoryViewController: ResultViewControllerDelegate{
+    func addNewAttemt(_ totalPoint: Int, _ questionCount: Int, _ questionArray: [Question]) {
+        attemts.append(Quiz(attemtTitle: String(attemts.count)+"attemt", totalPoint: totalPoint, questionCount: questionCount, questionArray: questionArray))
+        historyTableView.reloadData()
+    }
+}
+
+class HistoryViewController: UIViewController{
     var attemts = [Quiz]()
     @IBOutlet weak var historyTableView: UITableView!
-    
     override func viewDidLoad() {
-        print("is available")
         super.viewDidLoad()
+        self.title = "History Page"
         configure()
     }
     
@@ -23,21 +33,20 @@ class HistoryTableViewController: UITableViewController {
     }
     
     func configure() {
-        self.title = "History Page"
         historyTableView.delegate = self
         historyTableView.dataSource = self
         historyTableView.tableFooterView = UIView()
         historyTableView.register(UINib(nibName: "HistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "HistoryTableViewCell")
     }
+}
+
+extension HistoryViewController: UITableViewDataSource, UITableViewDelegate{
     
-    // MARK: - Table view data source
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return self.attemts.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return attemts.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell", for: indexPath) as! HistoryTableViewCell
         let item = attemts[indexPath.row]
         cell.configure(with: item)

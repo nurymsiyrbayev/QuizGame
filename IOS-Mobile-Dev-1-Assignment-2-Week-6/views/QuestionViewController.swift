@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: UIViewController{
     var questionArray = [Question](arrayLiteral:
     Question(questionText: "4x4", answereList: ["1","4","8","16"], correctAnswere: 4,answer: nil,  isAnswered: false),
     Question(questionText: "20 % of 2 is equal to", answereList: ["0.02","0.2","0.4","0.04"], correctAnswere: 3,answer: nil,  isAnswered: false),
@@ -44,6 +44,7 @@ class QuestionViewController: UIViewController {
             let vc = self.storyboard?.instantiateViewController(identifier: "ResultViewController") as! ResultViewController
             vc.totalPoint = self.quizPoint
             vc.questionCount = self.questionArray.count
+            vc.questionArray = self.questionArray
             self.navigationController?.pushViewController(vc, animated: true)
         }
         if self.currentQuestion != self.questionArray.count-1 {

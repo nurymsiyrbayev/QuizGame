@@ -12,14 +12,15 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var result: UILabel!
     var totalPoint:Int?
     var questionCount:Int?
-    let questionArray:[Question]? = nil
+    var questionArray:[Question]?
     
     weak var delegate: ResultViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegate?.addNewAttemt(self.totalPoint ?? 0, self.questionCount ?? 0, self.questionArray ?? [Question(questionText: "question", answereList: ["?"], correctAnswere: 0, answer: 0, isAnswered: true)])
+        self.animateBackgroundColor()
         self.title = "Result Page"
-        delegate?.addNewAttemt(totalPoint ?? 0, questionCount ?? 0, questionArray ?? [Question(questionText: "question", answereList: ["?"], correctAnswere: 0, answer: nil, isAnswered: true)])
         self.result.text = String(totalPoint ?? 0)+"/"+String(questionCount ?? 0)
     }
     
@@ -31,5 +32,61 @@ class ResultViewController: UIViewController {
     @IBAction func showHomePage(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(identifier: "ViewController") as! ViewController
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func animateBackgroundColor() {
+        let percentageScore = Int(self.totalPoint ?? 10)/(self.questionCount ?? 1)*100
+        if percentageScore > 100 || percentageScore < 0{
+            UIView.animate(withDuration: 0.4,animations: {
+                self.view.backgroundColor = .darkGray
+            },  completion:{ (completed: Bool) -> Void in
+                UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+                    self.view.backgroundColor = .systemGray5
+                })
+            })
+        }else{
+            if percentageScore >= 90{
+                UIView.animate(withDuration: 0.4,animations: {
+                    self.view.backgroundColor = UIColor.init(red: 191/256, green: 255/256, blue: 166/256, alpha: 1.0)
+                },  completion:{ (completed: Bool) -> Void in
+                    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+                        self.view.backgroundColor = .white
+                    })
+                })
+            }else if (percentageScore >= 70 )&&(percentageScore < 90 )  {
+                UIView.animate(withDuration: 0.4,animations: {
+                    self.view.backgroundColor = UIColor.init(red: 230/256, green: 255/256, blue: 156/256, alpha: 1.0)
+                },  completion:{ (completed: Bool) -> Void in
+                    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+                        self.view.backgroundColor = .white
+                    })
+                })
+            }else if (percentageScore >= 50 )&&(percentageScore < 70 )  {
+                UIView.animate(withDuration: 0.4,animations: {
+                    self.view.backgroundColor = UIColor.init(red: 255/256, green: 255/256, blue: 199/256, alpha: 1.0)
+                },  completion:{ (completed: Bool) -> Void in
+                    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+                        self.view.backgroundColor = .white
+                    })
+                })
+            }else if (percentageScore >= 25 )&&(percentageScore < 50 )  {
+                UIView.animate(withDuration: 0.4,animations: {
+                    self.view.backgroundColor = UIColor.init(red: 255/256, green: 193/256, blue: 166/256, alpha: 1.0)
+                },  completion:{ (completed: Bool) -> Void in
+                    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+                        self.view.backgroundColor = .white
+                    })
+                })
+            }else{
+                UIView.animate(withDuration: 0.4,animations: {
+                    self.view.backgroundColor = UIColor.init(red: 255/256, green: 60/256, blue: 46/256, alpha: 1.0)
+                },  completion:{ (completed: Bool) -> Void in
+                    UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
+                        self.view.backgroundColor = .white
+                    })
+                })
+            }
+        }
+        
     }
 }
