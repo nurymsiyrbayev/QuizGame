@@ -31,12 +31,12 @@ class HistoryViewController: UIViewController{
 extension HistoryViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return HystorySingleton.shared.quizHystory.count
+        return HistorySingleton.shared.quizHistory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryTableViewCell", for: indexPath) as! HistoryTableViewCell
-        let item = HystorySingleton.shared.quizHystory[indexPath.row]
+        let item = HistorySingleton.shared.quizHistory[indexPath.row]
         cell.configure(with: item)
         return cell
     }

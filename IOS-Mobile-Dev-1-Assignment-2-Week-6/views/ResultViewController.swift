@@ -17,7 +17,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.animateBackgroundColor()
-        HystorySingleton.shared.addNewQuiz(Quiz.init(attemtTitle: String(HystorySingleton.shared.quizHystory.count)+"attemt", totalPoint: totalPoint ?? 1, questionCount: questionCount ?? 1, questionArray: questionArray))
+        HistorySingleton.shared.addNewQuiz(Quiz.init(attemtTitle: String(HistorySingleton.shared.quizHistory.count)+"attemt", totalPoint: totalPoint ?? 1, questionCount: questionCount ?? 1, questionArray: questionArray))
         self.title = "Result Page"
         self.result.text = String(totalPoint ?? 0)+"/"+String(questionCount ?? 0)
     }
